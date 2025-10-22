@@ -46,7 +46,7 @@ app.use((req, res, next) => {
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
-mongoose.connect(`mongodb+srv://devanshparti_db_user:${process.env.DB_PASSWORD}@cluster0.s4omoas.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+mongoose.connect(process.env.Mongo_URL)
     .then(() => {
         console.log("DATABASE CONNECTED!");
     })
